@@ -8,18 +8,23 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
+    "dev": "dotenv -- turbo run dev --parallel",
+    "dev:web": "turbo run dev --filter web",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.26",
     "eslint-config-custom": "*",
     "prettier": "latest",
+    "styled-components": "^5.3.6",
     "turbo": "latest"
   },
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {},
-  "packageManager": "yarn@1.22.19"
+  "dependencies": {
+    "dotenv-cli": "^6.0.0"
+  },
+  "packageManager": "yarn@2.0.0-rc.30"
 }
