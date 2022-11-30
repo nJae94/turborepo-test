@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import { test, test2 } from 'utils';
 import { Person } from 'type';
-import DefaultInput from 'ui/Input/DefaultInput';
 
 export default function Web() {
   const click = () => {
@@ -19,7 +18,6 @@ export default function Web() {
   return (
     <Wrapper>
       <Test>Web</Test>
-      <DefaultInput />
       <Button onClick={click} />
       <div>{`${process.env.NEXT_PUBLIC_API_ENDPOINT}`}</div>
       <div>{`${process.env.NEXT_PUBLIC_ENVIRONMENT2}`}</div>
